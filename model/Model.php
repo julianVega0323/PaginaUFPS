@@ -39,11 +39,12 @@ abstract class  Model{
             array_pop($this->rows);
             return $this->rows;
             
-    } protected function rowsA(){
-        $this->db_open();
-        $result = $this->conn->query($this->query);
-        $aca= $result->num_rows;
-        return $aca;
-    }
+    } 
+//     protected function rowsA(){
+//         $this->db_open();
+//         $result = $this->conn->query($this->query);
+//         $aca= $result->num_rows;
+//         return $aca;
+//     }
 
 }

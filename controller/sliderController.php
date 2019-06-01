@@ -11,7 +11,7 @@ class SliderController{
        return $this->model->read();
 
     }
-    public function rows(){
-        return $this->model->rows();
-    }
+    // public function rows(){
+    //     return $this->model->rows();
+    // }
 }

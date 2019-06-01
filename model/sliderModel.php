@@ -8,26 +8,21 @@ class SliderModel extends Model {
 
          } 
         public function read(){
-            $sql="SELECT * FROM slider";
-            $this->query=$sql;
-            $this->get_query();
-         $num_rows= count($this->rows);
-         $data= array();
-         foreach($this->rows as $key => $value){
-           array_push($data,$value);
-         }
-         return $data;
+          $sql = "SELECT * FROM slider";
+          $this->query = $sql;
+          $data = $this->get_query();
+          return $data;
         }
-        public function rows(){
-          $sql="SELECT * FROM slider";
-            $this->query=$sql;
-            $num_rows2=  $this->rowsA();
-          return $num_rows2;
-        }
+        // public function rows(){
+        //   $sql="SELECT * FROM slider";
+        //     $this->query=$sql;
+        //     $num_rows2=  $this->rowsA();
+        //   return $num_rows2;
+        // }   
         public function update(){
            
         }
         public function delete(){
         }
-        
+
 }
