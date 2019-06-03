@@ -8,6 +8,14 @@ class Router{
         if(!isset($_GET['r'])||$_GET['r']=="index"){
             $home = new viewController();
             $home->load_view('index');
+        }else if(isset($_GET['r'])||$_GET['r']=="evento" ){
+        			if(isset($_GET['idevento'])){
+        				 $home = new viewController();
+                       $home->load_view('index');
+        			}else{
+        				 $home = new viewController();
+                       $home->load_view('evento');
+        			}
         }
     }
 

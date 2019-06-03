@@ -38,7 +38,7 @@ $num = count($a->read())/2;
                                 }
                                   ?>
                                   </ul>
-                        <a href="http://localhost:10003/ueventos/calendario" class="btn-u btn-u-sm pull-right tooltips" data-toggle="tooltip" data-placement="left" data-original-title="Ingresar a Calendario de Eventos">Ver
+                        <a href="index.php?r=evento" class="btn-u btn-u-sm pull-right tooltips" data-toggle="tooltip" data-placement="left" data-original-title="Ingresar a Calendario de Eventos">Ver
                             más <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
                     </div>
 
