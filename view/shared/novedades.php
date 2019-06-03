@@ -1,7 +1,7 @@
 <?php
 require_once('./controller/novedadController.php');
 $a = new  NovedadController();
-
+ 
 $novedad = $a->read();
 $num = count($a->read())/2;
 

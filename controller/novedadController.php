@@ -9,4 +9,4 @@ class NovedadController{
     public function read(){
        return $this->model->read();
     }
-}
+} 
