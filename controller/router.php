@@ -1,23 +1,30 @@
 <?php
 require_once('viewController.php');
-class Router{
-    public $route;
+class Router
+{
+    public function __construct()
+    {
+        $home = new viewController();
 
-    public function __construct(){
+        $vista = "index";
 
-        if(!isset($_GET['r'])||$_GET['r']=="index"){
-            $home = new viewController();
-            $home->load_view('index');
-        }else if(isset($_GET['r'])||$_GET['r']=="evento" ){
-        			if(isset($_GET['idevento'])){
-        				 $home = new viewController();
-                       $home->load_view('index');
-        			}else{
-        				 $home = new viewController();
-                       $home->load_view('evento');
-        			}
+        if (isset($_GET['r'])) {
+
+            if ($_GET['r'] == "evento") {
+                if (isset($_GET['idevento'])) {
+                    $vista = "index";
+                } else {
+                    $vista = "evento";
+                }
+            } else if ($_GET['r'] == "novedad") {
+                if (isset($_GET['idnovedad'])) {
+                    $vista = "index";
+                } else {
+                    $vista = "novedad";
+                }
+            } 
+
         }
+        $home->load_view($vista);
     }
-
-
 }
