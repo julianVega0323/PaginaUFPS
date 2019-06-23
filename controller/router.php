@@ -4,7 +4,6 @@ class Router
 {
     public function __construct()
     {
-        $home = new viewController();
 
         $vista = "index";
 
@@ -25,6 +24,6 @@ class Router
             } 
 
         }
-        $home->load_view($vista);
+        ViewController::load_view($vista);
     }
 }
